@@ -1,0 +1,10 @@
+version,label,value
+1,minpop,200000
+1,longoff,0.5
+1,skipcity,"Oakland,Long Beach"
+1,showcity,"Santa Barbara,Santa Rosa,San Rafael,Santa Cruz"
+1,mapcolors,"red,orange,yellow,green,green3"
+1,maplimits,20
+1,mapyear,2020
+1,mapvar,MAR_SH
+1,incstate,TRUE
