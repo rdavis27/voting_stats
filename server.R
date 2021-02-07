@@ -491,6 +491,15 @@ shinyServer(
             write(paste(xxparty, collapse = " "), paste0(data_dir,"TX_Senate_2018.csv"))
             write_delim(xx, paste0(data_dir,"TX_Senate_2018.csv"), append = TRUE, col_names = TRUE)
 
+            filenamex <- paste0(input_dir,"TX_Governor_2018_00.csv")
+            xxparty <- read_delim(filenamex, '\t', col_names = FALSE, n_max = 1)
+            xx <- read_delim(filenamex, '\t', skip = 1)
+            #"County,REP,DEM,LIB,Votes,Voters,TurnOut"
+            xx <- xx[,1:4]
+            xxparty <- xxparty[1:4]
+            write(paste(xxparty, collapse = " "), paste0(data_dir,"TX_Governor_2018.csv"))
+            write_delim(xx, paste0(data_dir,"TX_Governor_2018.csv"), append = TRUE, col_names = TRUE)
+            
             filenamex <- paste0(input_dir,"TX_President_2016_00.csv")
             xxparty <- read_delim(filenamex, '\t', col_names = FALSE, n_max = 1)
             xx <- read_delim(filenamex, '\t', skip = 1)
@@ -851,7 +860,7 @@ shinyServer(
         output$myVoteData <- renderPrint({
             states <- c("AZ","CA","FL","GA","IA","KY","ME","MI","MT","NC",
                         "PA","SC","TX")
-            races <- c("President", "Senate", "House", "Registered")
+            races <- c("President", "Senate", "House", "Governor", "Registered")
             years <- seq(input$year_first, input$year_last, by = input$year_step)
             files <- data.frame(matrix(ncol = length(states)+2, nrow = 0))
             colnames(files) <- c("Year", "Race", states)

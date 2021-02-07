@@ -29,11 +29,11 @@ shinyUI(pageWithSidebar(
                     selected = "Percent",
                     multiple = FALSE),
         selectInput("racex", "Races, x & y axes",
-                    choices = c("President","Senate","House","Registered"),
+                    choices = c("President","Senate","House","Governor","Registered"),
                     selected = "Senate",
                     multiple = FALSE),
         selectInput("racey", NULL,
-                    choices = c("President","Senate","House","Registered"),
+                    choices = c("President","Senate","House","Governor","Registered"),
                     selected = "President",
                     multiple = FALSE),
         splitLayout(
