@@ -1303,26 +1303,6 @@ shinyServer(
             parms <- rbind(parms, aparms)
             write_csv(parms, filename)
         })
-        tabPanel("Plot",
-                 sidebarPanel(
-                     width = 2,
-                     checkboxInput("showrow","Show row",value = FALSE),
-                     textInput("pos1", "Position above", value = ""),
-                     textInput("pos3", "Position below", value = ""),
-                     textInput("xscale", "X From,To,Step,Tick", value = ""),
-                     textInput("yscale", "Y From,To,Step,Tick", value = ""),
-                     textInput("xlimit","Limit",value = "-9,-3,3,9"),
-                     textInput("xcolor","Color",value = "red3,orange,green3,violet,blue3"),
-                     textInput("xparty","Party",value = "1_Solid R,2_Leans R,3_Toss-Up,4_Leans D,5_Solid D"),
-                     selectInput("noparty", "No-party",
-                                 choices = c("Count as Dem","Split 50/50","Split by Ratio","Count as Rep"),
-                                 selected = "Split by Ratio",
-                                 multiple = FALSE),
-                     textInput("vlimit","Vote Limit (1000s)",value = "1,10,100,1000"),
-                     textInput("vshape","Vote Shape",value = "1,10,16,17,15"),
-                     textInput("vdesc","Vote Desc",value = "< 1k,>=    1k,>=   10k,>=  100k,>= 1000k")
-                 ),
-        )
         observe({
             eventid <- "Plot"
             loadid <- "plotload"

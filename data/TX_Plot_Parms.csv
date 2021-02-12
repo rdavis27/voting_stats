@@ -2,8 +2,8 @@ version,label,value
 1,showrow,FALSE
 1,pos1,"Fort Bend,Denton,Bastrop,Brazos,Atascosa,Sterling"
 1,pos3,"Nueces,Caldwell,Jeff Davis,Waller,Crane,Refugio,Foard"
-1,xscale,
-1,yscale,
+1,xscale,NA
+1,yscale,NA
 1,xlimit,"-9,-3,3,9"
 1,xcolor,"red3,orange,green3,violet,blue3"
 1,xparty,"1_Solid R,2_Leans R,3_Toss-Up,4_Leans D,5_Solid D"
@@ -23,3 +23,15 @@ version,label,value
 2,vlimit,"1,10,100,1000"
 2,vshape,"1,10,16,17,15"
 2,vdesc,"< 1k,>=    1k,>=   10k,>=  100k,>= 1000k"
+3,showrow,FALSE
+3,pos1,"Brooks,Reeves,Bastrop,King,Crockett,Castro,Moore"
+3,pos3,"Frio,Brazos,Kent,Kinney"
+3,xscale,
+3,yscale,
+3,xlimit,"-9,-3,3,9"
+3,xcolor,"red3,orange,green3,violet,blue3"
+3,xparty,"1_Solid R,2_Leans R,3_Toss-Up,4_Leans D,5_Solid D"
+3,noparty,Split by Ratio
+3,vlimit,"1,10,100,1000"
+3,vshape,"1,10,16,17,15"
+3,vdesc,"< 1k,>=    1k,>=   10k,>=  100k,>= 1000k"
